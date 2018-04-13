@@ -47,7 +47,7 @@ def wechat_onmessage(msg):
                 sambaService(msg['Content'],author)
             elif msg['Content'].startswith("m"):
                 musicService(msg['Content'][2:],author)
-            else msg['Content'].startswith("tm"):
+            elif msg['Content'].startswith("tm"):
                 tmService(msg['Content'],author)
         except Exception,e:
             #exstr = traceback.format_exc()
