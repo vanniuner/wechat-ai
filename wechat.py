@@ -21,6 +21,14 @@ author=1
 global intervaled
 intervaled=60
 
+global help_msg
+help_msg = \
+        u"H: 帮助信息\n" \
+        u"M: 音乐\n" \
+        u"BTC: 比特币\n" \
+        u"TM: 下载机\n"
+
+
 @itchat.msg_register([itchat.content.TEXT])
 def wechat_onmessage(msg):
     if msg['Type'] == TEXT:
@@ -28,15 +36,18 @@ def wechat_onmessage(msg):
         try:
             if msg['User'] and  u'\u6ce5\u4eba\u5f20' != msg['User']['NickName']:
                 return 
-            if msg['Content'].startswith("btc"):
+            if msg['Content'] == 'h':
+                global help_msg
+                itchat.send(u'%s' % help_msg, msg['FromUserName'])
+            elif msg['Content'].startswith("btc"):
                 msg['Content'] = msg['Content'].replace("btc","btcprice")
                 output=commands.getoutput(msg['Content'])
                 itchat.send(u'%s' % output, msg['FromUserName'])
-            if msg['Content'].startswith("samba"):
+            elif msg['Content'].startswith("samba"):
                 sambaService(msg['Content'],author)
-            if msg['Content'].startswith("m"):
+            elif msg['Content'].startswith("m"):
                 musicService(msg['Content'][2:],author)
-            if msg['Content'].startswith("tm"):
+            else msg['Content'].startswith("tm"):
                 tmService(msg['Content'],author)
         except Exception,e:
             #exstr = traceback.format_exc()
