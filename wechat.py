@@ -8,7 +8,7 @@ import traceback
 import commands
 import sys
 from threading import Timer
-from samba import sambaService
+#from samba import sambaService
 from music import musicService
 from tmService import tmService
 
@@ -43,8 +43,8 @@ def wechat_onmessage(msg):
                 msg['Content'] = msg['Content'].replace("btc","btcprice")
                 output=commands.getoutput(msg['Content'])
                 itchat.send(u'%s' % output, msg['FromUserName'])
-            elif msg['Content'].startswith("samba"):
-                sambaService(msg['Content'],author)
+            # elif msg['Content'].startswith("samba"):
+            #     sambaService(msg['Content'],author)
             elif msg['Content'].startswith("m"):
                 musicService(msg['Content'][2:],author)
             elif msg['Content'].startswith("tm"):
