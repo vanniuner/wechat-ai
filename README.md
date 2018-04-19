@@ -1,6 +1,6 @@
 # wechat-ai
 # 安装库文件
-sudo pip install crypto
-sudo pip install future
-sudo pip install itchat
-sudo pip install bs4
+sudo pip install crypto<br>
+sudo pip install future<br>
+sudo pip install itchat<br>
+sudo pip install bs4<br>
