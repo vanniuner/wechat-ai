@@ -28,6 +28,8 @@ import base64
 import binascii
 import sys
 import crypto
+
+sys.path.append('./ncmbot')
 import ncmbot
 
 try:
