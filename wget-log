@@ -1,0 +1,12 @@
+--2018-04-20 10:11:31--  https://blockchain.info/ticker
+Resolving blockchain.info (blockchain.info)... 104.16.55.3, 104.16.54.3
+Connecting to blockchain.info (blockchain.info)|104.16.55.3|:443... failed: Connection timed out.
+Connecting to blockchain.info (blockchain.info)|104.16.54.3|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/json]
+Saving to: ‘ticker’
+
+     0K ..                                                     5.75M=0s
+
+2018-04-20 10:19:26 (5.75 MB/s) - ‘ticker’ saved [2285]
+
