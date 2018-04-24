@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import sys
 sys.path.append("./project/RasWxNeteaseMusic")
+sys.path.append("./project/RasWxNeteaseMusic/neteaseApi/ncmbot")
 from WxNeteaseMusic import WxNeteaseMusic
 import ncmbot
 

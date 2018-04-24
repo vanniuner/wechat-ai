@@ -40,7 +40,7 @@ def wechat_onmessage(msg):
                 global help_msg
                 itchat.send(u'%s' % help_msg, msg['FromUserName'])
             elif msg['Content'].startswith("btc"):
-                msg['Content'] = msg['Content'].replace("btc","btcprice")
+                msg['Content'] = msg['Content'].replace("btc","btcprice -m")
                 output=commands.getoutput(msg['Content'])
                 itchat.send(u'%s' % output, msg['FromUserName'])
             # elif msg['Content'].startswith("samba"):
@@ -50,8 +50,8 @@ def wechat_onmessage(msg):
             elif msg['Content'].startswith("tm"):
                 tmService(msg['Content'],author)
         except Exception,e:
-            #exstr = traceback.format_exc()
-            #print exstr
+            exstr = traceback.format_exc()
+            print exstr
             print "sth error"
 
 def timerfunc(inter,comm):
