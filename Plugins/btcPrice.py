@@ -26,6 +26,6 @@ class BtcPlugin(Model_MenuObj):
 
     def Start(content,sender):
     	if content.startswith("btc") == False:
-    		return
+            return
         res = content.replace("btc","btcprice -m")
-	    sender.send(res)
+	sender.send(res)
