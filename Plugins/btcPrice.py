@@ -28,4 +28,5 @@ class BtcPlugin(Model_MenuObj):
     	if content.startswith("btc") == False:
             return
         res = content.replace("btc","btcprice -m")
+        res = commands.getoutput(res)
 	sender.send(res)
