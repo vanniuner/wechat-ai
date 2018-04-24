@@ -64,7 +64,7 @@ def timerfunc(inter,comm):
         print "timeout for btcprice service"
 
 if __name__ == "__main__":
-    Timer(intervaled, timerfunc, (intervaled,"btcprice -s USD -c 0.081932") ).start()
+    Timer(intervaled, timerfunc, (intervaled,"btcprice -s USD,CNY -c 0.081932") ).start()
     itchat.auto_login(enableCmdQR=2, hotReload=True)
     author = itchat.search_friends(nickName=r'泥人张')[0]
     itchat.run()
