@@ -11,7 +11,7 @@ class TmPlugin(Model_MenuObj):
         pass
 
     def Start(content,sender):
-    	if msg['Content'].startswith("tm") == False:
+    	if content.startswith("tm") == False:
     		return
 	    if content=="tm":
 	        res=commands.getoutput("transmission-remote -ne -l 2>&1 | sed '$d' | sed 's/[ ][ ]\+/,/g' | awk -F',' 'NR>1{print $2,$10\"\\n\"$9,$7\"kb\\n\"$4,$3}'")
