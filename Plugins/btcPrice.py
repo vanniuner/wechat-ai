@@ -10,21 +10,25 @@ sys.setdefaultencoding('utf-8')
 global intervaled
 intervaled=60
 
+global authorg
+authorg=1
+
 def timerfunc(inter,comm):
     try:
         Timer(inter, timerfunc, (inter,comm) ).start()
-        global author
+        global authorg
         output=commands.getoutput(comm)
-        author.send(output)
+        authorg.send(output)
     except Exception,e:
         print "timeout for btcprice service"
 
 class BtcPlugin(Model_MenuObj):
     def __init__(self):
     	Timer(intervaled, timerfunc, (intervaled,"btcprice -s USD,CNY -c 0.081932 -m") ).start()
-        pass
 
     def Start(self,content,sender):
+        global authorg
+        authorg = sender
     	if content.startswith("btc") == False:
             return
         res = content.replace("btc","btcprice -m")
