@@ -18,7 +18,7 @@ class BtcPlugin(Model_MenuObj):
     def __init__(self):
         pass
 
-    def Start(content,sender):
+    def Start(self,content,sender):
     	if content.startswith("h") == False:
     	    return
         sender.send(u'%s' % help_msg)

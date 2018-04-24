@@ -24,7 +24,7 @@ class BtcPlugin(Model_MenuObj):
     	Timer(intervaled, timerfunc, (intervaled,"btcprice -s USD,CNY -c 0.081932 -m") ).start()
         pass
 
-    def Start(content,sender):
+    def Start(self,content,sender):
     	if content.startswith("btc") == False:
             return
         res = content.replace("btc","btcprice -m")

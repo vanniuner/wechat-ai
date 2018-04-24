@@ -6,7 +6,7 @@ class SambaPlugin(Model_MenuObj):
     def __init__(self):
         pass
 
-    def Start(content,sender):
+    def Start(self,content,sender):
         try:
 	    if content.startswith("samba"):
                 if content == "samba start":
