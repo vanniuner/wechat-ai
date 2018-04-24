@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import sys
-sys.path.append("./project")
+sys.path.append("./project/RasWxNeteaseMusic")
 from WxNeteaseMusic import WxNeteaseMusic
 import ncmbot
 from PluginManager import Model_MenuObj
