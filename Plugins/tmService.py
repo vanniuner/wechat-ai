@@ -13,6 +13,9 @@ intervaled=120
 global tmcommand
 tmcommand="transmission-remote -ne -l 2>&1 | sed '$d' | sed 's/[ ][ ]\+/,/g' | awk -F',' 'NR>1{print $2,$10\"\\n\"$9,$7\"kb\\n\"$4,$3}'"
 
+global authorg
+authorg=1
+
 def timerfunc(inter,comm):
     try:
         Timer(inter, timerfunc, (inter,comm) ).start()
@@ -28,6 +31,8 @@ class TmPlugin(Model_MenuObj):
         Timer(intervaled, timerfunc, (intervaled,tmcommand) ).start()
 
     def Start(self,content,sender):
+        global authorg
+        authorg = sender
     	if content.startswith("tm") == False:
     	    return
     	if content=="tm":
@@ -36,4 +41,4 @@ class TmPlugin(Model_MenuObj):
     	else:
     	    content = content.replace("tm","transmission-remote")
     	    res=commands.getoutput(content)
-            sender.send(res)
+        sender.send(res)
