@@ -15,6 +15,6 @@ class MusicPlugin(Model_MenuObj):
 
     def Start(self,content,sender):
     	if content.startswith("m"):
-            res = wnm.msg_handler(content)
+            res = wnm.msg_handler(content[2:])
             sender.send(res)
 
