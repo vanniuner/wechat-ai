@@ -32,7 +32,7 @@ class TmPlugin(Model_MenuObj):
     	    return
     	if content=="tm":
             global tmcommand
-            res=commands.getoutput(rmcommand)
+            res=commands.getoutput(tmcommand)
     	else:
     	    content = content.replace("tm","transmission-remote")
     	    res=commands.getoutput(content)
