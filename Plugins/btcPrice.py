@@ -24,7 +24,7 @@ def timerfunc(inter,comm):
 
 class BtcPlugin(Model_MenuObj):
     def __init__(self):
-    	Timer(intervaled, timerfunc, (intervaled,"btcprice -s USD,CNY -c 0.081932 -m") ).start()
+    	Timer(intervaled, timerfunc, (intervaled,"btcprice -s USD -m") ).start()
 
     def Start(self,content,sender):
         global authorg
