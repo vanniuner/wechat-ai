@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 import sys
 import commands
+from threading import Timer
 from PluginManager import Model_MenuObj
 reload(sys)
 sys.setdefaultencoding('utf-8')
