@@ -8,7 +8,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 global intervaled
-intervaled=75
+intervaled=60
 
 global authorg
 authorg=1
