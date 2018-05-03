@@ -35,7 +35,9 @@ class TmPlugin(Model_MenuObj):
         authorg = sender
     	if content.startswith("tm") == False:
     	    return
-    	if content=="tm":
+        elif content.index('trigger') > -1:
+            __init__()
+    	elif content=="tm":
             global tmcommand
             res=commands.getoutput(tmcommand)
     	else:
