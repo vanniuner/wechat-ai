@@ -18,7 +18,7 @@ def timerfunc(inter,comm):
         Timer(inter, timerfunc, (inter,comm) ).start()
         global authorg
         output=commands.getoutput(comm)
-        authorg.send(output)
+        authorg.send("btc/usdt " + output)
     except Exception,e:
         print "timeout for btcprice service"
 
