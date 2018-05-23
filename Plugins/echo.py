@@ -26,7 +26,7 @@ app_id = 1
 class echoService(Model_MenuObj):
     def __init__(self):
         cf=ConfigParser.ConfigParser()
-        cf.read("config.prop")
+        cf.read("../project/py_aiplat/config.prop")
         global app_key
         app_key = cf.get('txopen','app_key')
         app_id = cf.get('txopen','app_id')
