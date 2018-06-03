@@ -1,6 +1,6 @@
 #-*- coding: UTF-8 -*-
 import sys
-sys.path.append('../SDK')  
+sys.path.append('./project/py_aiplat/SDK')  
 import optparse
 import time
 import apiutil
@@ -8,7 +8,7 @@ import base64
 import ConfigParser
 
 cf=ConfigParser.ConfigParser()
-cf.read("config.prop")
+cf.read("./project/py_aiplat/demo/config.prop")
 app_key = cf.get('txopen','app_key')
 app_id = cf.get('txopen','app_id')
 

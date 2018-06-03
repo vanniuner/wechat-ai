@@ -90,7 +90,7 @@ class AiPlat(object):
         setParams(self.data, 'nonce_str', int(time.time()))
         setParams(self.data, 'speaker',5)
         setParams(self.data, 'format',2)
-        setParams(self.data, 'volume',0)
+        setParams(self.data, 'volume',10)
         setParams(self.data, 'speed',100)
         setParams(self.data, 'text', text)
         setParams(self.data, 'aht', 0)
