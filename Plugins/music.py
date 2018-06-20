@@ -7,7 +7,7 @@ import ncmbot
 from PluginManager import Model_MenuObj
 
 wnm = WxNeteaseMusic()
-ncmbot.login(phone='17302827960', password='7988860')
+ncmbot.login(phone='17302827960', password='123456')
 
 class MusicPlugin(Model_MenuObj):
     def __init__(self):
